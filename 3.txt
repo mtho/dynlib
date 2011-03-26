@@ -1,0 +1,35 @@
+Studienleistung: 
+
+Das zu erstellende Programm hat folgende Komponenten:
+
+- Ein Shared Object (libcalc.so), gegen das dynamisch gelinkt wird
+
+- Zwei Plugins, die abhängig von einer einfachen 
+  Konfigurationsdatei genutzt werden
+  
+- Das Hauptprogramm
+
+Das ganze Programm soll mit einem Makefile gebaut und 
+installiert werden können. 
+
+Die Library libcalc.so implementiert die Funktionen
+- calcCircleArea(...)
+- calcRectArea(...)
+==> Inhalt der Datei calcAreas.c
+
+- calcNewton(...)   -> Zur Berechnung der Fläche unter einer Kurve
+==> Inhalt der Datei calcNewton.c
+
+Ein einfaches Testprogramm (main.c) testet die drei Funktionsaufrufe. 
+Die Ausgabe des Ergebnisses erfolgt *nicht* mit printf auf die Konsole, 
+sondern nutzt eine Funktion void log(char*);
+
+Die log Funktion wird in den beiden zu erstellenden Plugins
+logconsole.so  und
+logfile.so (loggt in eine Datei log.txt, neue Einträge werden angehängt)
+implementiert. Abhängig von einer einfachen Konfigurationsdatei wird etweder 
+die eine, oder die andere Funktion zum loggen genutzt.
+
+Bearbeitungszeit: 3 Wochen
+
+Abgabe: Per Link auf euer Git Repository!!!
