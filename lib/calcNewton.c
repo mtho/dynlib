@@ -1,5 +1,6 @@
 #include <stdio.h>
 
-double calcNewton() {
-
+double calcNewton(double value) {
+	// Rechnung..
+	return value;
 }
